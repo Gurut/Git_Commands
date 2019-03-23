@@ -1,0 +1,42 @@
+-- First Time Git Setup -- Customization of the git environment on your computer
+
+	--Your Identity--
+		--Set your user name and e-mail address
+
+$ git config --global user.name "Gurut"
+$ git config --global user.email "samettonyali29@gmail.com"
+
+You can run these commands without "global" parameter to change these values for specific projects when you are in those projects' git folders.
+
+		--Set default text editor--
+$ git config --global core.editor vi
+
+		--Check your configuration settings--
+$ git config --list
+
+		-- Retrieve a specific key's value--
+$ git config <keyvalue>
+$ git config user.name
+
+		--Help--
+$ git help <verb>
+$ git help config
+
+		--For a quick refresher--
+$ git <verb> -h
+$ git config -h
+
+…or create a new repository on the command line
+
+echo "# OnlineVotinginItsInfancy" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Gurut/OnlineVotinginItsInfancy.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/Gurut/OnlineVotinginItsInfancy.git
+git push -u origin master
