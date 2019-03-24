@@ -26,6 +26,23 @@ $ git help config
 $ git <verb> -h
 $ git config -h
 
+	--Initializing a repository in an existing directory--
+$ cd ~/user/theproject	//Go to that project's directory
+$ git init	//Initialize the git project. This command creates .git folder that contains all of necessary repository files
+$ git add <file or files>	//Specify the files that you want to track
+$ git commit -m 'Comments for the commit'
+
+	--Cloning an existing repository--*
+$ git clone <url> <directory_name>**
+
+*the command is "clone" and not "checkout". This is an importantdistinction — instead of getting just a working copy, Git receives a full copy of nearly all data thatthe server has. Every version of every file for the history of the project is pulled down by defaultwhen you run git clone.
+**Optional
+
+		--Recording changes to the Repository--
+	--Checking the Status of the Files--
+$ git status
+
+
 …or create a new repository on the command line
 
 echo "# OnlineVotinginItsInfancy" >> README.md
