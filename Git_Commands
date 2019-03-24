@@ -41,6 +41,36 @@ $ git clone <url> <directory_name>**
 		--Recording changes to the Repository--
 	--Checking the Status of the Files--
 $ git status
+$ git status -s //for a simplified output
+
+	--Tracking New Files--
+$ git add <file_name>	//think of it more as “add precisely this content to the next commit”rather than “add this file to the project”
+$ 
+
+
+* Create a .gitignore file for the files that you do not want Git to automatically add or even show you as being untracked.
+
+Example: 
+$ cat .gitignore
+# Ignore any files ending in ".o" or ".a"
+*.[oa]
+# Ignore all files whose name ends with a tilde
+*~
+# Ignore all .a files
+*.a
+# but do track lib.a, even though you are ignoring .a files above
+!lib.a
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+# ignore all files in any directory named build
+build/
+# Ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+# Ignore all .pdf files in the doc/ directory and any of its subdirectories
+doc/**/*.pdf
+
+
+
 
 
 …or create a new repository on the command line
