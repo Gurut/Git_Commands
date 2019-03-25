@@ -74,6 +74,9 @@ $ git diff	// That command compares what is in your working directory with what 
 $ git diff --staged	// This command compares your staged changes to your last commit and shows what you’ve staged that will go into your next commit.
 $ git diff --cached	// To see what you have staged so far
 
+	--To Skip the Staging area--
+$ git commit -a -m '<Your comment for this commit>'
+
 
 
 …or create a new repository on the command line
