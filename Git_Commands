@@ -69,7 +69,10 @@ doc/*.txt
 # Ignore all .pdf files in the doc/ directory and any of its subdirectories
 doc/**/*.pdf
 
-
+	--To see what is changed but not yet staged--
+$ git diff	// That command compares what is in your working directory with what is in your staging area. Theresult tells you the changes you’ve made that you haven’t yet staged.
+$ git diff --staged	// This command compares your staged changes to your last commit and shows what you’ve staged that will go into your next commit.
+$ git diff --cached	// To see what you have staged so far
 
 
 
