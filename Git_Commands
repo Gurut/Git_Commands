@@ -77,6 +77,21 @@ $ git diff --cached	// To see what you have staged so far
 	--To Skip the Staging area--
 $ git commit -a -m '<Your comment for this commit>'
 
+	--Removing Files--
+$ rm TOBEDELETEDFILE.md	// delete first if the file is staged
+$ git rm TOBEDELETEDFILE.md	// then remove from the index
+$ git rm -f TOBEDELETEDFILE.md	// or you must force the removal
+$ git rm --cached TOBEDELETEDFILE.md	// keep the file in working tree (on the hard drive) but remove it from the staging area (Git does not track it anymore)
+
+	--Moving Files--
+$ git mv <file_from> <file_to>	// changes file names
+
+	--Viewing the Commit History--
+$ git log	// execute in the project
+$ git log -p	// shows the difference (the patch output)
+$ git log --stat	// some abbreviated stats for each commit
+$ git log --pretty=<format>	// Check "Table 1. Useful options for git log --pretty=format" in the book Pro Git by Scott Chacon. For more, check Table 2 in the book.
+
 
 
 …or create a new repository on the command line
