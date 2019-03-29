@@ -91,7 +91,62 @@ $ git log -p	// shows the difference (the patch output)
 $ git log --stat	// some abbreviated stats for each commit
 $ git log --pretty=<format>	// Check "Table 1. Useful options for git log --pretty=format" in the book Pro Git by Scott Chacon. For more, check Table 2 in the book.
 
+	--Limiting Log Output--
+$ git log --since=2.weeks	// gets the list of commits made in the last two weeks
 
+	--Undoing Things--
+$ git commit --amend	// If you want to redo a commit, make the additional changes you forgot, stage them, and commit again using the --amend option
+
+// For example: If you commit and then realize you forgot to stage the changes in a file you wanted to add to this commit, you can do something like this:
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+// The second commit replaces the results of the first
+
+		--Unstaging a Staged File--
+// For example, let’s say you’ve changed two files and want to commit them as two separate changes, but you accidentally type git add * and stage them both.
+// How can you unstage one of the two?
+$ git reset HEAD <file>	// Avoid using with --hard flag
+
+		--Unmodifying a Modified File--
+// What if you realize that you don’t want to keep your changes to a file? How can you easily unmodify it — revert it back to what it looked like when you last committed (or initially 
+// cloned, or however you got it into your working directory)?
+$ git checkout -- <file>
+// !!!Caveat!!! It’s important to understand that git checkout -- <file> is a dangerous command.Any local changes you made to that file are gone — Git just copied the most 
+// recently-committed version of that file over top of it. Don’t ever use this command unless you absolutely know that you don’t want those unsaved local changes.
+
+	--Working with Remotes--
+		--Showing Your Remotes--
+$ git remote
+
+		--Adding Remote Repositories--
+$ git remote add <shortname> <url>
+
+		--Fetching and Pulling from Your Remotes--
+$ git fetch <remote>	// only downloads the data to your local repository — it doesn’t automatically merge it with any of your work or modify what you’re currently working on.
+$ git pull <remote>	// automatically fetch and then merge that remote branch into your current branch
+
+		--Pushing to Your Remotes--
+$ git push <remote> <branch>
+$ git push origin master
+// If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to fetch their work first and
+// incorporate it into yours before you’ll be allowed to push.
+
+		--Inspecting a Remote--
+$ git remote show <remote>
+$ git remote show origin
+
+		--Renaming and Removing Remotes--
+$ git remote rename <old_name> <new_name>	// rename
+$ git remote remove <short_name>
+
+	--Tagging--
+		--Listing Your Tags--
+$ git tag
+$ git tag -l "v1.8.5*"	// interested only in looking at the 1.8.5 series
+
+		--Creating Tags--
+$ 
 
 …or create a new repository on the command line
 
