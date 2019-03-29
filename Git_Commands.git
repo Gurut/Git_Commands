@@ -45,7 +45,6 @@ $ git status -s //for a simplified output
 
 	--Tracking New Files--
 $ git add <file_name>	//think of it more as “add precisely this content to the next commit”rather than “add this file to the project”
-$ 
 
 
 * Create a .gitignore file for the files that you do not want Git to automatically add or even show you as being untracked.
