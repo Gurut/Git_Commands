@@ -146,7 +146,23 @@ $ git tag
 $ git tag -l "v1.8.5*"	// interested only in looking at the 1.8.5 series
 
 		--Creating Tags--
-$ 
+$ git tag -a v1.4 -m "my version 1.4"	// Annotated tags
+$ git tag v1.4-lw	// Lightweight tags
+
+		--Sharing Tags--
+$ git push <remote> <tagname>
+$ git push gitcmmnds v0.8	// Example
+
+		--Deleting Tags--
+$ git tag -d <tagname>	// Removing a tag on the local repository
+$ git push <remote> :refs/tags/<tagname>	// Removing a tag on a remote server
+$ git push <remote> --delete <tagname>	// Removes a tag on a remote server
+
+	--Git Aliases--
+$ git config --global alias.<alias_name> <parameter>
+$ git config --global alias.unstage 'reset HEAD --'	// correct the usability problem you encountered with unstaging a file
+$ git config --global alias.last 'log -1 HEAD'	// Display the last commit
+
 
 …or create a new repository on the command line
 
