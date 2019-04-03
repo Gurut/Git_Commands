@@ -163,6 +163,13 @@ $ git config --global alias.<alias_name> <parameter>
 $ git config --global alias.unstage 'reset HEAD --'	// correct the usability problem you encountered with unstaging a file
 $ git config --global alias.last 'log -1 HEAD'	// Display the last commit
 
+	--Git Branching--
+		--Creating a New Branch--
+$ git branch <branch_name>	// only creates a new branch, but doesn't switch to that branch
+$ git log --oneline --decorate	// shows on which branch you are now
+$ git checkout <branch_name>	// Switch to the new branch
+$ git checkout -b <branch_name>	// Create a new branch and switch to that branch
+$ git branch -d <branch_name>	// Delete a branch
 
 …or create a new repository on the command line
 
