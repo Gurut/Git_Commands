@@ -171,6 +171,26 @@ $ git checkout <branch_name>	// Switch to the new branch
 $ git checkout -b <branch_name>	// Create a new branch and switch to that branch
 $ git branch -d <branch_name>	// Delete a branch
 
+		--Basic Merging--
+$ git checkout <branch_name1>	// Switch to that branch first
+$ git merge	<branch_name2>	// Merge branch_name2 into branch_name1
+$ git branch -d branch_name2	// No need branch_name2 anymore, so delete it
+
+		--Basic Merge Conflicts--
+// Occasionaly happens when the same part of the same file have been changed differently in the two branches you are merging. "git status" shows the conflicts
+// Resolve the conflicts and run "git add" for each file to stage them
+
+	--Branch Management--
+$ git branch --merged	// A list of branches that you have merged into the branch that you are currently on
+$ git branch --no-merged	// A list of branches that you have not yet merged into the branch that you are currently on. Trying to delete any branch in this list will fail
+$ git branch -D <branch_name>	// You can force to delete any non-merged branch with -D
+$ git branch --no-merged/merged <branch_name>	// Check merge state wrt some other branch branch_name
+
+
+
+
+
+
 …or create a new repository on the command line
 
 echo "# OnlineVotinginItsInfancy" >> README.md
